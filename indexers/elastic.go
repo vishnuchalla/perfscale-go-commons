@@ -28,8 +28,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cloud-bulldozer/kube-burner/log"
-	"github.com/cloud-bulldozer/kube-burner/pkg/config"
+	"github.com/vishnuchalla/perfscale-go-commons/logger"
 
 	elasticsearch "github.com/elastic/go-elasticsearch/v7"
 	"github.com/elastic/go-elasticsearch/v7/esutil"

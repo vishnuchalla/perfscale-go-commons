@@ -24,7 +24,7 @@ const (
 // Indexer indexer interface
 type Indexer interface {
 	Index([]interface{}, IndexingOpts)
-	new(config.Spec) error
+	new(IndexerConfig) error
 }
 
 // Indexing options

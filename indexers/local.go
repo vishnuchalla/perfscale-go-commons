@@ -20,8 +20,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/cloud-bulldozer/kube-burner/log"
-	"github.com/cloud-bulldozer/kube-burner/pkg/config"
+	"github.com/vishnuchalla/perfscale-go-commons/logger"
 )
 
 const local = "local"
