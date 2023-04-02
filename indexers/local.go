@@ -51,14 +51,14 @@ func (l *Local) Index(documents []interface{}, opts IndexingOpts) {
 		metricName = fmt.Sprintf("%s.json", opts.MetricName)
 	}
 	filename := path.Join(l.metricsDirectory, metricName)
-	log.Infof("Writing metric to: %s", filename)
+	logger.Infof("Writing metric to: %s", filename)
 	f, err := os.Create(filename)
 	if err != nil {
-		log.Errorf("Error creating metrics file %s: %s", filename, err)
+		logger.Errorf("Error creating metrics file %s: %s", filename, err)
 	}
 	defer f.Close()
 	jsonEnc := json.NewEncoder(f)
 	if jsonEnc.Encode(documents); err != nil {
-		log.Errorf("JSON encoding error: %s", err)
+		logger.Errorf("JSON encoding error: %s", err)
 	}
 }
